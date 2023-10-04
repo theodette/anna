@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <title>BasketballEvents.com</title>
+</head>
+<body class="w-full h-full bg-no=repeat bg-cover bg-center bg-fixed  " style="background-image: linear-gradient(rgba(181,181,35,0.5),rgba(174,21,100,0.4)),url();">
+    <header class=" bg-[#E6C09F] mix-blend-soft-color-dodge drop-shadow-2xl h-25  ">
+        <nav class=" flex items-center justify-between  ">
+            <div class=" flex ">
+                <img src="images/AIT (1).png" alt=" logo image"  class="rounded-xl w-20 mix-blend-color-burn  hover:scale-110 p duration-300  ">
+                 
+                
+            </div>
+            <div class="flex  px-1 space-x-6">
+                <div   class=" px-1 space-x-6">
+                    <button class="bg-[#B59983] rounded-xl py-1 hover:scale-110 p duration-300  w-20 text-xl "  >
+                        Home
+                    </button>
+                    <button class="hover:bg-[#B59983] rounded-xl py-1 hover:scale-110 p duration-300 space-x-0 w-20 text-xl " id="events-btn" >
+                        Events
+                    </button>
+                    <div class="flex-col hidden" id="events">
+                        <a href="admition.html"  class="hover:scale-110 p duration-300 hover:bg-[#B59983] rounded-xl" > The Bal</a>
+                        <a href="admition.html" class="hover:scale-110 p duration-300 hover:bg-[#B59983] rounded-xl"> N-Ligue</a>
+                    </div>
+                    
+                    
+                </div>
+                <button class="hover:bg-[#B59983] rounded-xl py-1 hover:scale-110 p duration-300 space-x-2 w-20 text-xs " id="logout" >
+                    <a href="login.html">Logout</a>
+                    <h4 id="user"></h4>  
+                </button>
+            </div>
+            
+        </nav>
+    </header>
+
+   <div>
+    <h1>welcome</h1>
+   </div>
+    
+<script>
+    //recieving the usrename
+   const username = localStorage.getItem("user")
+   document.getElementById("user").textContent = username;
+//drp downs
+ window.addEventListener('DOMContentLoaded',()=>{
+     const eButton = document.querySelector('#events-btn')
+     const event = document.querySelector('#events')
+
+     eButton.addEventListener('click', () =>{
+        event.classList.toggle('hidden')
+        event.classList.toggle('flex')
+     })
+
+     
+     
+ })
+
+</script>
+  
+</body>
+</html>

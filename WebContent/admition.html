@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <title>login</title>
+</head>
+<body>
+   <section class=" bg-[#D2BFB0] opacity-90 min-h-screen flex items-center justify-center">
+
+    <!-- container -->
+    <div class="bg-[#E6C09F] flex rounded-3xl shadow-2xl max-w-3xl p-5 ">
+            
+       
+        <!--left  with form-->
+        <!--left  md,sm mean hw it will look loke on small devices -->
+        
+        <div class="md:w-1/2 px-16" >
+            <h1 class="font-bold text-2xl text-[#B59983] ">Register Here</h1>
+            
+            <form action="admition" class="flex flex-col gap-4 ">
+
+                <input class="p-2 mt-8 rounded-xl border" type="text" id="Fname" name="name" placeholder="Fist Name" required>
+                <input class="p-2 rounded-xl border" type="text"  name="Lname" placeholder="Last Name" required>
+                <input class="p-2 rounded-xl border" type="text"  name="phone" placeholder="phone" required>
+                <input class="p-2  rounded-xl border" type="text"  name="email" placeholder="email" required>
+                <input class="p-2 rounded-xl border" type="text"  name="age" placeholder="age" required>
+                <input class="p-2 rounded-xl border" type="text"  name="team" placeholder="Team" required>
+                <input class="p-2  rounded-xl border" type="text"  name="addres" placeholder="adress" required>
+                <input class="p-2 rounded-xl border" type="text"  name="experence" placeholder="years played" required>
+                <input class="p-2 rounded-xl border" type="text"  name="nationality" placeholder="nationality" required>
+                <span>Gender</span>
+                <div>
+                    <input type="radio" id="male" value="Male">
+                <label for="male"> Male</label>
+                <input type="radio" id="female" value="Male">
+                <label for="female"> Female</label>
+                <input type="radio" id="none" value="none">
+                <label for="none"class=" text-xs"> prefer not to say</label>
+
+
+                </div>
+                <div id="uploads">
+                    <input class="p-2 rounded-xl border" type="file"  name="diploma" placeholder="diploma" accept=".pdf" required>
+                    <input class="p-2 rounded-xl border" type="file"  name="picture" placeholder="picture" accept=".jpg, .png" required>
+
+
+                </div>
+                
+
+
+                
+                <button class="bg-[#B59983] rounded-xl py-2 hover:scale-110 duration-300" id="login" onclick="func()">Register</button>
+            </form>
+            
+        
+            
+        </div>
+
+        <!-- right with image  md means on small blockes it is going to be hidden-->
+        <div class="w-1/2 md:block hidden"> 
+            <img  class="rounded-3xl  " src="images/bb.jpeg" alt=" playin image">
+
+        </div>
+
+    </div>
+   
+
+   </section>
+    
+
+   <script>
+    function func(){
+       
+       
+     
+    
+        
+        window.location.assign("index.html")
+
+
+       alert(" your request sent succesfully!  ")
+
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <title>login</title>
+</head>
+<body>
+   <section class=" bg-[#D2BFB0] opacity-90 min-h-screen flex items-center justify-center">
+
+    <!-- container -->
+    <div class="bg-[#E6C09F] flex rounded-3xl shadow-2xl max-w-3xl p-5 ">
+            
+       
+        <!--left  with form-->
+        <!--left  md,sm mean hw it will look loke on small devices -->
+        
+        <div class="md:w-1/2 px-16" >
+            <h1 class="font-bold text-2xl text-[#B59983] ">Register Here</h1>
+            
+            <form action="register" class="flex flex-col gap-4 ">
+
+                <input class="p-2 mt-8 rounded-xl border" type="text" name="fname"  placeholder="Fist Name" required>
+                <input class="p-2 rounded-xl border" type="text"  name="Lname" placeholder="Last Name" required>
+                <input class="p-2 rounded-xl border" type="text"  name="phone" placeholder="phone" required>
+                <input class="p-2 mt-8 rounded-xl border" type="password" id="password" name="password1" placeholder="Enter password" required>
+                <input class="p-2 rounded-xl border" type="password" id="passwordField" name="password2" placeholder=" Confirm Password" required>
+
+                <button class="bg-[#B59983] rounded-xl py-2 hover:scale-110 duration-300" id="login" onclick="func()">Register</button>
+            </form>
+            
+        
+            
+        </div>
+
+        <!-- right with image  md means on small blockes it is going to be hidden-->
+        <div class="w-1/2 md:block hidden"> 
+            <img  class="rounded-3xl  " src="images/bb.jpeg" alt=" playin image">
+
+        </div>
+
+    </div>
+   
+
+   </section>
+    
+
+   <script>
+    function func(){
+       
+        var fname = document.getElementById("fname" ).value;
+        var password = document.getElementById("passwordField" ).value; 
+        var passwordField = document.getElementById('password').value;
+
+
+     
+    if(password == passwordField  && password != null){
+        
+        window.location.assign("index.html")
+
+//passing usrname to the home page
+
+       localStorage.setItem("user",fname)
+       window.location.href="index.html"
+
+       //alert(" you are Logged in !  ")
+
+    }else{
+        alert("enter the same password !")
+    }
+   }
+   </script>
+</body>
+</html>

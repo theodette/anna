@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <title>login</title>
+</head>
+<body>
+   <section class=" bg-[#D2BFB0] opacity-90 min-h-screen flex items-center justify-center">
+
+    <!-- container -->
+    <div class="bg-[#E6C09F] flex rounded-3xl shadow-2xl max-w-3xl p-5 ">
+            
+       
+        <!--left  with form-->
+        <!--left  md,sm mean hw it will look loke on small devices -->
+        
+        <div class="md:w-1/2 px-16" >
+            <h1 class="font-bold text-2xl text-[#B59983] ">Login</h1>
+            
+            <form action="Login" method="get" class="flex flex-col gap-4 ">
+
+                <input class="p-2 mt-8 rounded-xl border" type="text" id="emailField" name="username" placeholder="Username" required>
+                <input class="p-2 rounded-xl border" type="password" id="passwordField" name="password" placeholder="Password" required>
+
+                <button class="bg-[#B59983] rounded-xl py-2 hover:scale-110 duration-300" type="submit" id="login" >Login</button>
+                <h3 class="text-[#B59983]  hover:scale-110 duration-300" ><a href="forgotpassword.html">forgoten password?</a></h3>
+            </form>
+            <div class="mt-10  items-center text-[#B59983]">
+                <hr class="border-[#B59983]">
+                <p class="text-sm  ">If you are not a d1 player register</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <button class="bg-[#B59983] rounded-xl py-2  hover:scale-110 duration-300" id="register"><a href="register.html">Register</a></button>
+            </div>
+            
+        </div>
+
+        <!-- right with image  md means on small blockes it is going to be hidden-->
+        <div class="w-1/2 md:block hidden"> 
+            <img  class="rounded-3xl  " src="images/bb.jpeg" alt=" playin image">
+
+        </div>
+
+    </div>
+   
+
+   </section>
+    
+<!--  
+   <script>
+    function func(){
+        //var logibtn = document.getElementById("login" ).value;
+        var email = document.getElementById("emailField" ).value;
+        var password = document.getElementById("passwordField" ).value; 
+
+     
+    if(email =='ishimwe' && password == '12345'){
+        
+        //returning the home page
+        // window.location.assign("index.html")
+
+        //passing usrname to the home page
+        localStorage.setItem("user",email)
+        window.location.href="index.html"
+
+        // alert("Login succesfull")
+
+
+    }else{
+        alert("email and password missmatch !")
+    }
+}
+     
+
+   </script>
+   -->
+</body>
+</html>
